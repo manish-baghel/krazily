@@ -1,4 +1,4 @@
-BASIC WEB APPLICATION using GULP
+Krazily
 
 Don't forget to run $ npm install
 If things don't workout then follow below code:-
