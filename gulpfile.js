@@ -14,7 +14,7 @@ var runSequence = require('run-sequence');
 //-----------------
 // Converts Sass to CSS with gulp-sass
 gulp.task('sass', function(){
-  return gulp.src('app/scss/**/*.scss')
+  return gulp.src('app/scss/**/styles.scss')
     .pipe(sass()) //plugin to perform task
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
@@ -89,8 +89,10 @@ gulp.task('clean:dist',function(){
 //---------------
 
 //build task to combine other tasks
-gulp.task('build',function(callback){
-    runSequence('clean:dist',['sass','useref','images','fonts'],callback)
+gulp.task('build',function(){
+    runSequence('clean:dist',['sass','useref','images','fonts'],function(){
+        console.log('build task complete');
+    })
 });
 
 
