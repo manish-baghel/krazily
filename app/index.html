@@ -2,45 +2,62 @@
 <html>
     <head>
         <title>Krazily</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <!--build:css css/styles.min.css-->
+        <link rel="stylesheet" href="css/styles.css">
+        <!--endbuild-->
+        <script src="js/app.js" type="application/javascript"></script>
     </head>
     <body>
+        
         <!--TopHeader -->
-        <section id="top-header">
+        <section id="top-header" class="clearfix">
             <div class="social-media-links">
                 <a href="#">
-                   <i class="fa fa-facebook-official fa-2x" area hidden="true" style="color:#41599e;"></i>
+                   <i class="fa fa-facebook-official fa-2x" area hidden="true" style="color:#008de0;"></i>
                 </a>
             </div>
             <div class="content-links">
-                <span>GLOBAL</span>
-                <span>|</span>
-                <span>DESI</span>
+                <span>GLOBAL | DESI</span>
             </div>
         </section>
-        
-        <!--Navigation bar-->
-        <section id="bottom-header">
+
+        <!--bottom header-->
+        <section id="bottom-header" class="clearfix">
+            <div id="logo">
             <img src="images/logo.jpg" alt="logo">
+            </div>
+            <a href="#" class="menu-btn" id="nav_button">
+                <div class="menu-btn-block top" id="nav_top"></div>
+                <div class="menu-btn-block middle" id="nav_middle"></div>
+                <div class="menu-btn-block bottom" id="nav_bottom"></div>
+            </a>
+        </section>
+        
+        <!-- Sidebar -->
+        <section id="sidebar" class="">
             <div class="navbar">
                 <ul>
-                    <li class="nav-button">Trending</li>
-                    <li class="nav-button">standup</li>
-                    <li class="nav-button">anime</li>
-                    <li class="nav-button">short films</li>
-                    <li class="nav-button">funny clips</li>
-                    <li class="nav-button">pics</li>
-                    <li class="nav-button">jokes</li>
-                    <li class="nav-button">upload</li>
+                    <a href="#"><li class="nav-button">Trending</li></a>
+                    <a href="#"><li class="nav-button">standup</li></a>
+                    <a href="#"><li class="nav-button">anime</li></a>
+                    <a href="#"><li class="nav-button">short films</li></a>
+                    <a href="#"><li class="nav-button">funny clips</li></a>
+                    <a href="#"><li class="nav-button">pics</li></a>
+                    <a href="#"><li class="nav-button">jokes</li></a>
+                    <a href="#"><li class="nav-button">upload</li></a>
                 </ul>
             </div>
         </section>
         
+        
+        
         <!-- home_banner-->
         <section id="banner">
             <div id="banner-overlay">
-                <span class="first_heading">Welcome to the world's only social network for comedy!</span>
-                <br><br><br><span class="second_heading">Go krazily!</span>
+                <div class="first_heading">Welcome to the world's only social</div>
+                <div class="first_heading">network for comedy!</div>
+                <br><div class="second_heading">Go krazily!</div>
             </div>
         </section>
         
@@ -56,7 +73,7 @@
                         MORE VIDEOS +
                     </span>
                 </header>
-                <div class="content">
+                <div class="content clearfix">
                     <div class="feed-card card-one">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
@@ -129,7 +146,7 @@
                         MORE VIDEOS +
                     </span>
                 </header>
-                <div class="content">
+                <div class="content clearfix">
                     <div class="feed-card card-one">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
@@ -202,7 +219,7 @@
                        MORE VIDEOS + 
                     </span>
                 </header>
-                <div class="content">
+                <div class="content clearfix">
                     <div class="feed-card card-one">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
@@ -270,8 +287,29 @@
         
         <!-- footer -->
         <section id="footer">
-            
+            <div class="footer-links">
+                <ul class="links">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+            <div class="form">
+                <header>Contact Us</header>
+                <form method="post">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message" class="message"></textarea>
+                </form>
+                <a href="#">
+                   <i class="fa fa-facebook-official fa-3x" area hidden="true" style="color:#008de0;"></i>
+                </a>
+            </div>
+            <div class="footer-black">
+                copyright @ 2017 krazily
+            </div>
         </section>
-        
     </body>
 </html>

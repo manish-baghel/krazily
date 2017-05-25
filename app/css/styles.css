@@ -2331,6 +2331,11 @@
   overflow: visible;
   clip: auto; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 * {
   margin: 0;
   padding: 0;
@@ -2340,135 +2345,149 @@ body {
   font-family: sans-serif; }
 
 #top-header {
+  max-height: 50px;
   background-color: #e4e5e6;
-  position: relative;
-  width: 100%;
-  height: 50px;
-  padding: 10px 60px 10px 0; }
-  #top-header .content-links {
-    float: right;
-    font-size: 1em;
-    word-spacing: 5px;
-    margin-right: 20px;
-    margin-top: 7px; }
-    #top-header .content-links span {
-      letter-spacing: 1.5px; }
-      #top-header .content-links span:hover {
-        cursor: pointer; }
+  padding: 8px 30px 10px 30px; }
   #top-header .social-media-links {
-    float: right;
-    clear: both; }
-    #top-header .social-media-links a:hover {
-      cursor: pointer; }
+    float: right; }
+  #top-header .content-links {
+    float: left;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    word-spacing: 5px; }
+
+#sidebar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  z-index: 500;
+  position: absolute; }
+  #sidebar .navbar {
+    z-index: 500;
+    margin-left: 60%;
+    position: absolute;
+    top: 0px;
+    background-color: #404142;
+    height: 91vh;
+    width: 40%;
+    padding: 20px;
+    text-align: center; }
+    #sidebar .navbar ul {
+      text-transform: capitalize;
+      list-style: none; }
+      #sidebar .navbar ul a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1em;
+        font-weight: lighter; }
+        #sidebar .navbar ul a:visited {
+          text-decoration: none; }
+      #sidebar .navbar ul li {
+        margin: 10px 0px 10px 0; }
 
 #bottom-header {
-  position: relative;
-  overflow: hidden; }
-  #bottom-header img {
-    display: block;
+  background-color: #feffff; }
+  #bottom-header #logo {
     float: left; }
-    #bottom-header img:hover {
-      cursor: pointer; }
-  #bottom-header .navbar {
-    float: left;
-    clear: right; }
-    #bottom-header .navbar ul {
-      margin-left: 120px;
-      list-style: none; }
-      #bottom-header .navbar ul li {
-        display: inline-block;
-        text-transform: capitalize;
-        font-size: 1.25em;
-        letter-spacing: 0.5px;
-        font-weight: 300;
-        color: orange;
-        margin-right: 40px;
-        margin-top: 30px; }
-        #bottom-header .navbar ul li:hover {
-          cursor: pointer; }
+  #bottom-header .hidden {
+    display: none; }
+  #bottom-header .menu-btn {
+    float: right;
+    padding: 7px;
+    border-radius: 5px;
+    height: 40px;
+    margin: 20px 20px 0 0;
+    border: solid black 2px; }
+    #bottom-header .menu-btn .menu-btn-block {
+      width: 30px;
+      height: 4px;
+      background-color: #000;
+      border-radius: 3px;
+      transition: transform 0.3s ease; }
+    #bottom-header .menu-btn .middle {
+      margin: 5px 0 5px 0; }
+    #bottom-header .menu-btn .activetop {
+      transform-origin: center;
+      transform: translate(1px, 10px) rotate(48deg); }
+    #bottom-header .menu-btn .activemiddle {
+      transform: scale(0); }
+    #bottom-header .menu-btn .activebottom {
+      transform-origin: center;
+      transform: translate(1px, -8px) rotate(-48deg); }
 
 #banner {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  height: 600px;
+  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  background-image: url("../images/banner.jpg"); }
+  background-image: url("../images/banner.jpg");
+  height: 300px; }
   #banner #banner-overlay {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), transparent);
-    height: 600px;
-    text-align: center;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 200px; }
-    #banner #banner-overlay span {
-      font-size: 2.75em;
+    height: 300px;
+    padding-top: 120px;
+    text-align: center; }
+    #banner #banner-overlay div {
+      font-size: 0.9em;
       color: white;
       text-transform: uppercase; }
     #banner #banner-overlay .first_heading {
       font-weight: 600; }
     #banner #banner-overlay .second_heading {
-      font-size: 2.2em;
+      font-size: 0.8em;
       font-weight: 300; }
 
 #feeds {
-  padding-top: 40px; }
+  padding-top: 30px; }
   #feeds .container {
-    width: 1045px;
     background-color: #fcfdfe;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    width: 100%; }
     #feeds .container .container_header {
-      height: 50px;
-      padding: 10px 20px 10px 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
       background-color: #ffca00;
-      text-transform: uppercase;
-      overflow: hidden;
-      clear: both; }
+      height: 30px;
+      text-align: center;
+      padding: 4px; }
       #feeds .container .container_header span {
-        font-size: 1.75em;
+        letter-spacing: 2px;
+        font-size: 1.4em;
+        text-transform: uppercase;
         color: white; }
-      #feeds .container .container_header .left {
-        float: left; }
       #feeds .container .container_header .right {
-        float: right;
-        font-weight: 400;
-        font-size: 1.2em; }
+        display: none; }
     #feeds .container .content {
-      margin-top: 20px;
-      margin-bottom: 80px;
-      overflow: hidden;
-      clear: both; }
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 30px;
+      text-align: center; }
       #feeds .container .content .feed-card {
-        float: left;
-        width: 250px; }
+        margin-bottom: 30px; }
         #feeds .container .content .feed-card .feed-image {
+          width: 100%;
           position: relative;
-          min-height: 200px; }
-          #feeds .container .content .feed-card .feed-image .feed-overlay {
-            position: absolute;
-            width: 100%;
-            height: 250px;
-            z-index: 200; }
-            #feeds .container .content .feed-card .feed-image .feed-overlay:hover {
-              background-color: rgba(255, 255, 255, 0.4);
-              cursor: pointer; }
+          text-align: center; }
+          #feeds .container .content .feed-card .feed-image img {
+            width: 330px;
+            height: 300px; }
+            @media only screen and (max-width: 413px) {
+              #feeds .container .content .feed-card .feed-image img {
+                width: 100%;
+                height: 230px; } }
           #feeds .container .content .feed-card .feed-image i {
             position: absolute;
             color: white;
             left: 50%;
             top: 50%;
             transform: translateX(-50%) translateY(-50%); }
-          #feeds .container .content .feed-card .feed-image img {
-            width: 250px;
-            max-height: 250px;
-            margin-left: auto;
-            margin-right: auto; }
         #feeds .container .content .feed-card .feed-content {
-          margin-top: 30px;
-          font-size: 0.9em; }
+          text-align: left; }
           #feeds .container .content .feed-card .feed-content header {
             font-size: 1.1em;
             color: #5b5b5b;
@@ -2476,14 +2495,105 @@ body {
             word-spacing: 2px;
             font-weight: 600; }
           #feeds .container .content .feed-card .feed-content p {
+            text-align: left;
             margin-top: 15px;
             color: gray;
             letter-spacing: 0.5px;
             font-weight: lighter;
-            line-height: 20px; }
-      #feeds .container .content .card-one {
-        margin-right: 15px; }
-      #feeds .container .content .card-two {
-        margin-right: 15px; }
-      #feeds .container .content .card-three {
-        margin-right: 15px; }
+            line-height: 30px; }
+
+#footer {
+  background-color: #404142;
+  color: white;
+  text-align: center;
+  padding: 50px 0 0 0; }
+  #footer .footer-links {
+    padding-bottom: 20px; }
+    #footer .footer-links .links li {
+      margin: 10px 0 10px 0;
+      font-size: 1.1em; }
+  #footer .form header {
+    text-transform: uppercase;
+    margin-bottom: 30px; }
+  #footer .form input {
+    color: #404142;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    padding: 10px; }
+    #footer .form input::placeholder {
+      opacity: 1;
+      color: #404142; }
+  #footer .form .message {
+    color: #404142;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    padding: 10px;
+    height: 120px; }
+    #footer .form .message::placeholder {
+      color: #404142; }
+  #footer .footer-black {
+    background-color: black;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    height: 40px;
+    padding-top: 10px;
+    font-size: 0.9em; }
+
+@media screen and (min-width: 501px) {
+  #banner #banner-overlay div {
+    font-size: 1.4em;
+    color: white;
+    text-transform: uppercase; }
+  #banner #banner-overlay .first_heading {
+    font-weight: 600; }
+  #banner #banner-overlay .second_heading {
+    font-size: 1.1em;
+    font-weight: 300; } }
+
+@media screen and (min-width: 501px) {
+  #feeds .container .container_header {
+    height: 60px;
+    padding-top: 15px;
+    font-size: 1.2em; }
+  #feeds .container .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; }
+    #feeds .container .content .feed-card {
+      width: 49%;
+      float: left; }
+      #feeds .container .content .feed-card:nth-child(2n) {
+        margin-left: 2%; }
+      #feeds .container .content .feed-card .feed-image img {
+        width: 100%; } }
+
+@media screen and (min-width: 501px) {
+  #footer {
+    padding: 50px 0 0 0; }
+    #footer .footer-links .links li {
+      font-size: 1.4em; }
+    #footer .form header {
+      font-size: 1.4em; }
+    #footer .form input {
+      width: 600px;
+      height: 60px; }
+    #footer .form .message {
+      width: 600px;
+      height: 160px;
+      margin-bottom: 50px; }
+    #footer .footer-black {
+      height: 70px;
+      padding-top: 30px;
+      font-size: 1.1em; } }
