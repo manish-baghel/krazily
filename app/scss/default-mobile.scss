@@ -144,7 +144,7 @@ body{
         .container_header{
             width: 90%;
             margin-left: auto;
-        margin-right: auto;
+            margin-right: auto;
            background-color: #ffca00;
            height: 30px;
             text-align: center;
@@ -218,6 +218,7 @@ body{
     .footer-links{
         padding-bottom: 20px;
         .links{
+            list-style: none;
             li{
                 margin: 10px 0 10px 0;
                 font-size: 1.1em;
