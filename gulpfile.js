@@ -14,7 +14,7 @@ var runSequence = require('run-sequence');
 //-----------------
 // Converts Sass to CSS with gulp-sass
 gulp.task('sass', function(){
-  return gulp.src('app/scss/**/styles.scss')
+  return gulp.src('app/scss/styles.scss')
     .pipe(sass()) //plugin to perform task
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
@@ -49,7 +49,7 @@ gulp.task('browserSync',function(){
 gulp.task('useref',function(){
     return gulp.src('app/*.html')
     .pipe(useref())
-    //minifies only if it is js 
+    //minifies only if it is js or css 
     .pipe(gulpIf('*.js',uglify()))
     .pipe(gulpIf('*.css',cssnano()))
     .pipe(gulp.dest('dist'))

@@ -17,7 +17,9 @@
 body{
     font-family:sans-serif;
 }
-
+.blur{
+    filter: blur(30px);
+}
 #top-header{
     max-height: 50px;
     background-color:#e4e5e6;
@@ -32,20 +34,27 @@ body{
         word-spacing: 5px;
     }
 }
+    .hidden{
+        display: none;
+    }
 #sidebar{
     width: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(black,0.1);
     height: 100%;
     z-index: 500;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
+
+        transition: width 0.3s;    right: 0;
+    @media screen and (max-width:1309px){
     .navbar{
         z-index: 500;
-        margin-left: 60%;
+//        margin-left: 60%;
         position: absolute;
         top: 0px;
-        background-color: #404142;
-        height: 91vh;
-        width: 40% ;    
+        background-color:inherit;
+        height: 100%;
+        width: 100% ;    
         padding: 20px;
         text-align: center;
         ul{
@@ -53,19 +62,31 @@ body{
             list-style: none;
             a{
                 text-decoration: none;
-                color: white;
-                font-size: 1.1em;
-                font-weight: lighter;
+                color: orange;
+                font-size: 1.75em;
+                font-weight: 600;
+                letter-spacing: 0.1px;
                 &:visited{
                     text-decoration: none;
                 }
             }
             li{
-                margin: 10px 0px 10px 0;
+                margin: 40px 0px 10px 0;
             }
         }
     }
+    }
+     
 }
+
+@media screen and (max-width:1309px){
+ #sidebar.hiddenSidebar{
+     width: 0;
+        transition: width 0.3s;
+    }
+}
+
+
 #bottom-header{
     background-color:#feffff; 
     #logo{
@@ -175,7 +196,7 @@ body{
                         width: 330px;
                         @media only screen and (max-width: 413px) {
                             width: 100%;
-                            height: 230px;
+                            height: 300px;
                         }
                         height: 300px;
                     }
@@ -201,7 +222,6 @@ body{
                         margin-top: 15px;
                         color: gray;
                         letter-spacing: 0.5px;
-                        font-weight: lighter;
                         line-height: 30px;
                     }
                 }

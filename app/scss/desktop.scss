@@ -28,7 +28,7 @@
 }
 @media screen and (min-width:1310px){
     #sidebar{
-         width: 70%;
+         width: 80%;
          background-color: white;
          height: 60px;
          z-index: 500;
@@ -41,7 +41,7 @@
         background-color: #feffff;
         height: 60px;
         width: 100%;
-        padding: 5px;
+        padding: 5px 0px 5px 5px;
         margin-left: 0px;
         margin-right: 0;
         text-align: left;
@@ -51,12 +51,11 @@
             li{
                 display: inline-block;
                 text-transform: capitalize;
-                font-size: 1.25em;
+                font-size: 1.5em;
                 letter-spacing: 0.5px;
                 font-weight: 300;
                 color: orange;
-                margin-left: 3%;
-                margin-right: 0;
+                margin: 10px 3% 10px 0;
                 &:hover{
                 cursor: pointer;
             }
@@ -180,7 +179,7 @@
     }
 }
 }
-@media screen and (min-width:950px){
+@media screen and (min-width:1000px){
  #footer{
     padding: 50px 0 0 0;
      text-align: left;
@@ -198,7 +197,7 @@
     }
     .form{
         float: left;
-        margin-left: 400px;
+        margin-left: 30%;
         header{
             text-transform: uppercase;
             margin-bottom: 30px;

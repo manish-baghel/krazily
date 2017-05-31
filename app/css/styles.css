@@ -2344,6 +2344,9 @@
 body {
   font-family: sans-serif; }
 
+.blur {
+  filter: blur(30px); }
+
 #top-header {
   max-height: 50px;
   background-color: #e4e5e6;
@@ -2356,34 +2359,46 @@ body {
     letter-spacing: 1px;
     word-spacing: 5px; }
 
+.hidden {
+  display: none; }
+
 #sidebar {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   height: 100%;
   z-index: 500;
-  position: absolute; }
-  #sidebar .navbar {
-    z-index: 500;
-    margin-left: 60%;
-    position: absolute;
-    top: 0px;
-    background-color: #404142;
-    height: 91vh;
-    width: 40%;
-    padding: 20px;
-    text-align: center; }
-    #sidebar .navbar ul {
-      text-transform: capitalize;
-      list-style: none; }
-      #sidebar .navbar ul a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.1em;
-        font-weight: lighter; }
-        #sidebar .navbar ul a:visited {
-          text-decoration: none; }
-      #sidebar .navbar ul li {
-        margin: 10px 0px 10px 0; }
+  position: fixed;
+  overflow: hidden;
+  transition: width 0.3s;
+  right: 0; }
+  @media screen and (max-width: 1309px) {
+    #sidebar .navbar {
+      z-index: 500;
+      position: absolute;
+      top: 0px;
+      background-color: inherit;
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      text-align: center; }
+      #sidebar .navbar ul {
+        text-transform: capitalize;
+        list-style: none; }
+        #sidebar .navbar ul a {
+          text-decoration: none;
+          color: orange;
+          font-size: 1.75em;
+          font-weight: 600;
+          letter-spacing: 0.1px; }
+          #sidebar .navbar ul a:visited {
+            text-decoration: none; }
+        #sidebar .navbar ul li {
+          margin: 40px 0px 10px 0; } }
+
+@media screen and (max-width: 1309px) {
+  #sidebar.hiddenSidebar {
+    width: 0;
+    transition: width 0.3s; } }
 
 #bottom-header {
   background-color: #feffff; }
@@ -2479,7 +2494,7 @@ body {
             @media only screen and (max-width: 413px) {
               #feeds .container .content .feed-card .feed-image img {
                 width: 100%;
-                height: 230px; } }
+                height: 300px; } }
           #feeds .container .content .feed-card .feed-image i {
             position: absolute;
             color: white;
@@ -2499,7 +2514,6 @@ body {
             margin-top: 15px;
             color: gray;
             letter-spacing: 0.5px;
-            font-weight: lighter;
             line-height: 30px; }
 
 #footer {
@@ -2579,6 +2593,8 @@ body {
       #feeds .container .content .feed-card:nth-child(2n) {
         margin-left: 2%; }
       #feeds .container .content .feed-card .feed-image img {
+        margin-left: auto;
+        margin-right: auto;
         width: 100%; } }
 
 @media screen and (min-width: 601px) {
@@ -2628,7 +2644,7 @@ body {
 
 @media screen and (min-width: 1310px) {
   #sidebar {
-    width: 70%;
+    width: 80%;
     background-color: white;
     height: 60px;
     z-index: 500;
@@ -2641,7 +2657,7 @@ body {
       background-color: #feffff;
       height: 60px;
       width: 100%;
-      padding: 5px;
+      padding: 5px 0px 5px 5px;
       margin-left: 0px;
       margin-right: 0;
       text-align: left; }
@@ -2651,12 +2667,11 @@ body {
         #sidebar .navbar ul li {
           display: inline-block;
           text-transform: capitalize;
-          font-size: 1.25em;
+          font-size: 1.5em;
           letter-spacing: 0.5px;
           font-weight: 300;
           color: orange;
-          margin-left: 3%;
-          margin-right: 0; }
+          margin: 10px 3% 10px 0; }
           #sidebar .navbar ul li:hover {
             cursor: pointer; }
           #sidebar .navbar ul li:nth-child(8) {
@@ -2750,7 +2765,7 @@ body {
             #feeds .container .content .feed-card .feed-content p {
               line-height: 20px; } }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1000px) {
   #footer {
     padding: 50px 0 0 0;
     text-align: left; }
@@ -2764,7 +2779,7 @@ body {
         font-weight: lighter; }
     #footer .form {
       float: left;
-      margin-left: 400px; }
+      margin-left: 30%; }
       #footer .form header {
         text-transform: uppercase;
         margin-bottom: 30px; }

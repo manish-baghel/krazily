@@ -6,7 +6,9 @@
         <!--build:css css/styles.min.css-->
         <link rel="stylesheet" href="css/styles.css">
         <!--endbuild-->
-        <script src="js/app.js" type="application/javascript"></script>
+        <!--build:js js/app.min.js-->
+        <script src="js/app.js"></script>
+        <!--endbuild-->
     </head>
     <body>
         
@@ -35,8 +37,8 @@
         </section>
         
         <!-- Sidebar -->
-        <section id="sidebar" class="">
-            <div class="navbar">
+        <section id="sidebar" class="hiddenSidebar">
+            <div class="navbar" id="navbar">
                 <ul>
                     <a href="#"><li class="nav-button">Trending</li></a>
                     <a href="#"><li class="nav-button">standup</li></a>
