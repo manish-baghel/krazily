@@ -1,31 +1,4 @@
-@media screen and (min-width:950px){
-#banner{
-    @include background-size(cover);
-    white-space: nowrap;
-    height: 600px;
-    background-position: center;
-    background-attachment: fixed;
-    background-image: url("../images/banner.jpg");    
-    #banner-overlay{
-        background: linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0.1),rgba(0,0,0,0));
-        height: 600px;
-        text-align: center;
-        padding-top: 200px;
-        div{
-            font-size: 2.75em;
-            color: white;
-            text-transform: uppercase;
-        }
-        .first_heading{
-            font-weight:600;
-        }
-        .second_heading{
-            font-size: 2.2em;
-            font-weight: 300;
-        }
-    }
-}   
-}
+
 @media screen and (min-width:1310px){
     #sidebar{
          width: 80%;
@@ -78,7 +51,7 @@
                 
         }
 }
-}
+}  
 
 @media screen and (min-width:1310px){
     #top-header{
@@ -109,32 +82,101 @@
     }
 }
 }
-
 @media screen and (min-width:1025px){
-    #feeds{
-    padding-top: 40px;
-    .container{
-        width: 1045px;
-        .container_header{
-            height: 50px;
-            width: 100%;
-            padding: 10px 20px 10px 20px;
-            text-transform: uppercase;
-            span{
-                font-size: 1.4em;
-                color: white;
-            }
-            .left{
-                float: left;
-            }
-            .right{
-                display: block;
-                float: right;
-                font-weight: 400;
-                font-size: 1.1em;
+    #tagNav{
+        position: absolute;
+        top: 155px;
+        padding: 20px;
+        padding-top: 30px;
+        background-color: #e4e5e6;
+        width: 20%;
+        margin-right: 5%;
+        height: 407vh;
+        .tagSearch{
+            form{
+                input{
+                    height: 30px;
+                    width: 200px;
+                    border: solid 1px black;
+                }
+                .searchButton{
+                    float: left;
+                    height: 30px;
+                    width: 30px;
+                    img{
+                    height: 30px;
+                    width: 30px;
+                    }
+                }
             }
         }
-                .content{
+    }
+}
+@media screen and (min-width:1025px){
+#mainContent{
+    text-align: right;
+    padding-top: 20px;
+    .mainHeading{
+        width: 1045px;
+        margin-right: 60px;
+        background-color: #ffca00;
+        height: 50px;
+        text-align: center;
+        padding: 10px;
+        span{
+            letter-spacing: 2px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: white;
+        }
+        margin-bottom: 13px;
+    }
+    .container{
+        margin-right: 60px;
+        width: 1045px;
+        .container_header{
+            background-color: #ffca00;
+            height: 45px;
+            width: 100%;
+            padding: 5px 20px 5px 20px;
+            text-transform: uppercase;
+            header{
+                height: 35px;
+                float: left;
+                padding: 5px;
+                letter-spacing: 2px;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                color: white;
+                margin-bottom: 15px;
+            }
+            .filter{
+                padding: 10px 20px 0px 20px;
+                text-align: left;
+                float: right;
+                width: 500px;
+                span{
+                    font-size: 1.2em;
+                    color: white;
+                    word-spacing: 0.5px;
+                    display: block;
+                    float: left;
+                    font-weight: 300;
+                    width: 220px;
+                    margin-bottom: 10px;
+                    &:hover{
+                    cursor: pointer;
+                }
+                    &:nth-child(1){
+                        text-align: right;
+                    }
+                    &:nth-child(2){
+                        margin-left: 4%;
+                    }
+                }
+            }
+        }
+        .content{
                     width: 100%;
                     margin-top: 20px;
                     margin-bottom: 80px;
@@ -175,11 +217,29 @@
                     }
                 }
             }
+        .pageButtons{
+            float: right;
+            margin-top: -60px;
+            font-size: 1em;
+            margin-bottom: 30px;
+            width: 130px;
+            word-spacing: 3px;
+            span{
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #404142;
+                font-weight: bolder;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        
     }
 }
 }
 @media screen and (min-width:1000px){
- #footer{
+    #footer{
     padding: 50px 0 0 0;
      text-align: left;
     .footer-links{

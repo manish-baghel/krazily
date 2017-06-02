@@ -2,6 +2,9 @@
 @import "default-mobile";
 @import "tablet";
 @import "desktop";
+@import "inner-mobile";
+@import "inner-tablet";
+@import "inner-desktop";
 @mixin background-size($type){
     background-size: $type;
     -webkit-background-size: $type;

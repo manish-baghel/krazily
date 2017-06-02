@@ -14,9 +14,10 @@
         navMiddle.classList.toggle("activemiddle");
         navBottom.classList.toggle("activebottom");
         sidebar.classList.toggle("hiddenSidebar");
-        bannerOverlay.classList.toggle("hidden");
-        banner.classList.toggle('blur');
-        feed.classList.toggle('blur');
+//        bannerOverlay.classList.toggle("hidden");
+//        banner.classList.toggle('blur');
+//        feed.classList.toggle('blur');
+        innerMainContent.classList.toggle('blur');
         window.addEventListener('scroll', noscroll);
         w = window.innerWidth;
         if(sidebar.classList.contains("hiddenSidebar") || w > 1309){
@@ -35,9 +36,10 @@
            navMiddle = document.getElementById('nav_middle'),
            navBottom = document.getElementById('nav_bottom');
            sidebar = document.getElementById('sidebar');
-          bannerOverlay = document.getElementById('banner-overlay');
-        banner = document.getElementById('banner');
-        feed = document.getElementById('feeds');
+           bannerOverlay = document.getElementById('banner-overlay');
+           banner = document.getElementById('banner');
+           feed = document.getElementById('feeds');
+           innerMainContent = document.getElementById('mainContent');
            
     }
 })();
