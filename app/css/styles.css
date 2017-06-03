@@ -3035,15 +3035,24 @@ body {
     height: 407vh; }
     #tagNav .tagSearch form input {
       height: 30px;
-      width: 200px;
+      width: 185px;
       border: solid 1px black; }
     #tagNav .tagSearch form .searchButton {
-      float: left;
+      float: right;
       height: 30px;
       width: 30px; }
       #tagNav .tagSearch form .searchButton img {
         height: 30px;
-        width: 30px; } }
+        width: 30px;
+        padding-top: 3px;
+        padding-right: 1px;
+        background-color: #ffca00; }
+    #tagNav .tags header {
+      padding-top: 20px; }
+    #tagNav .tags li {
+      list-style: none;
+      padding-top: 10px;
+      border-bottom: dotted 1px; } }
 
 @media screen and (min-width: 1025px) {
   #mainContent {

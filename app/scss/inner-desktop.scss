@@ -96,18 +96,33 @@
             form{
                 input{
                     height: 30px;
-                    width: 200px;
+                    width: 185px;
                     border: solid 1px black;
                 }
                 .searchButton{
-                    float: left;
+                    float: right;
                     height: 30px;
                     width: 30px;
                     img{
                     height: 30px;
                     width: 30px;
+                        padding-top: 3px;
+                        padding-right:1px;
+                        
+                        background-color: #ffca00;
                     }
                 }
+            }
+        }
+        
+        .tags{
+            header{
+                padding-top: 20px;
+            }
+            li{
+                list-style: none;
+                padding-top: 10px;
+                border-bottom: dotted 1px;
             }
         }
     }
