@@ -2644,13 +2644,13 @@ body {
 
 @media screen and (min-width: 1310px) {
   #sidebar {
-    width: 80%;
+    width: 950px;
     background-color: white;
     height: 60px;
     z-index: 500;
     position: absolute;
     top: 60px;
-    left: 20%; }
+    right: 60px; }
     #sidebar .navbar {
       display: inline-block;
       position: absolute;
@@ -2664,7 +2664,7 @@ body {
       #sidebar .navbar ul {
         list-style: none;
         width: 100%; }
-        #sidebar .navbar ul li {
+        #sidebar .navbar ul .nav-button {
           display: inline-block;
           text-transform: capitalize;
           font-size: 1.5em;
@@ -2672,14 +2672,20 @@ body {
           font-weight: 300;
           color: orange;
           margin: 10px 3% 10px 0; }
-          #sidebar .navbar ul li:hover {
-            cursor: pointer; }
-          #sidebar .navbar ul li:nth-child(8) {
+          #sidebar .navbar ul .nav-button::nth-child(8) {
             margin-right: 0; }
-  #bottom-header .hidden {
-    display: none; }
-  #bottom-header .menu-btn {
-    display: none; } }
+          #sidebar .navbar ul .nav-button:hover {
+            cursor: pointer; }
+        #sidebar .navbar ul .marginright0 {
+          margin-right: 0; }
+  #bottom-header {
+    height: 85px; }
+    #bottom-header #logo {
+      margin-left: 70px; }
+    #bottom-header .hidden {
+      display: none; }
+    #bottom-header .menu-btn {
+      display: none; } }
 
 @media screen and (min-width: 1310px) {
   #top-header {
@@ -2964,45 +2970,6 @@ body {
       font-size: 1.1em; } }
 
 @media screen and (min-width: 1310px) {
-  #sidebar {
-    width: 80%;
-    background-color: white;
-    height: 60px;
-    z-index: 500;
-    position: absolute;
-    top: 60px;
-    left: 20%; }
-    #sidebar .navbar {
-      display: inline-block;
-      position: absolute;
-      background-color: #feffff;
-      height: 60px;
-      width: 100%;
-      padding: 5px 0px 5px 5px;
-      margin-left: 0px;
-      margin-right: 0;
-      text-align: left; }
-      #sidebar .navbar ul {
-        list-style: none;
-        width: 100%; }
-        #sidebar .navbar ul li {
-          display: inline-block;
-          text-transform: capitalize;
-          font-size: 1.5em;
-          letter-spacing: 0.5px;
-          font-weight: 300;
-          color: orange;
-          margin: 10px 3% 10px 0; }
-          #sidebar .navbar ul li:hover {
-            cursor: pointer; }
-          #sidebar .navbar ul li:nth-child(8) {
-            margin-right: 0; }
-  #bottom-header .hidden {
-    display: none; }
-  #bottom-header .menu-btn {
-    display: none; } }
-
-@media screen and (min-width: 1310px) {
   #top-header {
     height: 50px;
     padding: 0px 60px 10px 0; }
@@ -3030,9 +2997,9 @@ body {
     padding: 20px;
     padding-top: 30px;
     background-color: #e4e5e6;
-    width: 20%;
+    width: 30%;
     margin-right: 5%;
-    height: 407vh; }
+    height: 450vh; }
     #tagNav .tagSearch form input {
       height: 30px;
       width: 185px;
@@ -3059,7 +3026,7 @@ body {
     text-align: right;
     padding-top: 20px; }
     #mainContent .mainHeading {
-      width: 1045px;
+      width: 900px;
       margin-right: 60px;
       background-color: #ffca00;
       height: 50px;
@@ -3073,7 +3040,7 @@ body {
         color: white; }
     #mainContent .container {
       margin-right: 60px;
-      width: 1045px; }
+      width: 900px; }
       #mainContent .container .container_header {
         background-color: #ffca00;
         height: 45px;
@@ -3117,7 +3084,7 @@ body {
         #mainContent .container .content .feed-card {
           float: left;
           margin-bottom: 20px;
-          width: 250px;
+          width: 200px;
           margin-right: 15px;
           margin-left: 0px; }
           #mainContent .container .content .feed-card:nth-child(4n) {
@@ -3127,8 +3094,8 @@ body {
             position: relative;
             min-height: 200px; }
             #mainContent .container .content .feed-card .feed-image img {
-              width: 250px;
-              max-height: 250px;
+              width: 200px;
+              max-height: 200px;
               margin-left: auto;
               margin-right: auto; }
             #mainContent .container .content .feed-card .feed-image .feed-overlay {

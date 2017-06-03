@@ -28,13 +28,13 @@
 }
 @media screen and (min-width:1310px){
     #sidebar{
-         width: 80%;
+         width: 950px;
          background-color: white;
          height: 60px;
          z-index: 500;
          position: absolute;
          top: 60px;
-         left: 20%;
+         right: 60px;
     .navbar{
         display: inline-block;
         position: absolute;
@@ -48,27 +48,35 @@
         ul{
             list-style: none;
             width: 100%;
-            li{
+            .nav-button{
                 display: inline-block;
                 text-transform: capitalize;
                 font-size: 1.5em;
                 letter-spacing: 0.5px;
                 font-weight: 300;
+              
                 color: orange;
                 margin: 10px 3% 10px 0;
-                &:hover{
-                cursor: pointer;
-            }
-                &:nth-child(8){
+                &::nth-child(8){
                     margin-right: 0;
                 }
+                &:hover{
+                cursor: pointer;
+                }
+            }
+            .marginright0{
+                margin-right: 0;
             }
         }
     }
     }
     
     #bottom-header{
+        height: 85px;
     #logo{
+        margin-left: 70px;
+        img{
+        }
     }
     .hidden{
         display: none;
