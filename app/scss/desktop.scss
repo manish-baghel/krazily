@@ -148,6 +148,9 @@
                     margin-bottom: 80px;
                     text-align: left;
                 .feed-card{
+                    &:nth-child(2n){
+                margin-left: 0px;
+            }
                     float: left;
                     margin-bottom: 20px;
                     width: 250px;

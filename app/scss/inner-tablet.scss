@@ -1,4 +1,7 @@
-@media screen  and (min-width: 601px) and (max-width: 1024px)/* Tablet */ {
+@media screen  and (min-width: 601px) and (max-width: 1237px)/* Tablet */ {
+    #tagNav{
+        display: none;
+    }
     #mainContent{
         .container{
             .container_header{
@@ -8,7 +11,7 @@
                 .filter{
                 text-align: left;
                 span{
-                    font-size: 1.4em;
+                    font-size: 1.1em;
                     word-spacing: 2px;
                     display: block;
                     float: left;
@@ -41,7 +44,10 @@
                     img{
                         margin-left: auto;
                         margin-right: auto;
-                    width: 100%;
+                        width: 100%;
+                        @media screen and (min-width:836px){
+                            width: 370px;
+                    }
                     }
                 }
             }

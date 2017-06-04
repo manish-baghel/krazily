@@ -2404,6 +2404,8 @@ body {
   background-color: #feffff; }
   #bottom-header #logo {
     float: left; }
+    #bottom-header #logo a:hover {
+      cursor: pointer; }
   #bottom-header .hidden {
     display: none; }
   #bottom-header .menu-btn {
@@ -2739,6 +2741,8 @@ body {
           width: 250px;
           margin-right: 15px;
           margin-left: 0px; }
+          #feeds .container .content .feed-card:nth-child(2n) {
+            margin-left: 0px; }
           #feeds .container .content .feed-card:nth-child(4n) {
             margin-right: 0px;
             margin-left: 0px; }
@@ -2815,6 +2819,9 @@ body {
       width: 100%;
       float: left;
       font-size: 1em; } }
+
+#tagNav {
+  display: none; }
 
 #mainContent .mainHeading {
   width: 90%;
@@ -2915,7 +2922,9 @@ body {
       #mainContent .container .pageButtons span:hover {
         cursor: pointer; }
 
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 601px) and (max-width: 1237px) {
+  #tagNav {
+    display: none; }
   #mainContent .container .container_header {
     height: 60px;
     padding-top: 15px;
@@ -2923,7 +2932,7 @@ body {
     #mainContent .container .container_header .filter {
       text-align: left; }
       #mainContent .container .container_header .filter span {
-        font-size: 1.4em;
+        font-size: 1.1em;
         word-spacing: 2px;
         display: block;
         float: left;
@@ -2949,6 +2958,9 @@ body {
         margin-left: auto;
         margin-right: auto;
         width: 100%; } }
+      @media screen and (min-width: 601px) and (max-width: 1237px) and (min-width: 836px) {
+        #mainContent .container .content .feed-card .feed-image img {
+          width: 370px; } }
 
 @media screen and (min-width: 601px) {
   #footer {
@@ -2990,41 +3002,64 @@ body {
       #top-header .social-media-links a:hover {
         cursor: pointer; } }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1238px) {
   #tagNav {
-    position: absolute;
-    top: 155px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    display: block;
     padding: 20px;
     padding-top: 30px;
     background-color: #e4e5e6;
-    width: 30%;
-    margin-right: 5%;
+    width: 20%;
     height: 450vh; }
-    #tagNav .tagSearch form input {
-      height: 30px;
-      width: 185px;
-      border: solid 1px black; }
-    #tagNav .tagSearch form .searchButton {
-      float: right;
-      height: 30px;
-      width: 30px; }
-      #tagNav .tagSearch form .searchButton img {
-        height: 30px;
-        width: 30px;
-        padding-top: 3px;
-        padding-right: 1px;
-        background-color: #ffca00; }
-    #tagNav .tags header {
-      padding-top: 20px; }
-    #tagNav .tags li {
-      list-style: none;
-      padding-top: 10px;
-      border-bottom: dotted 1px; } }
+    #tagNav .tagSearch {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 215px; }
+      #tagNav .tagSearch form {
+        width: 215px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+        #tagNav .tagSearch form input {
+          display: block;
+          float: left;
+          font-size: 0.8em;
+          padding-left: 10px;
+          left: 100px;
+          height: 30px;
+          width: 185px;
+          border: solid 1px black; }
+        #tagNav .tagSearch form .searchButton {
+          float: left;
+          height: 30px;
+          width: 30px; }
+          #tagNav .tagSearch form .searchButton img {
+            height: 30px;
+            width: 30px;
+            padding-top: 3px;
+            padding-right: 1px;
+            background-color: #ffca00; }
+          #tagNav .tagSearch form .searchButton:hover {
+            cursor: pointer; }
+    #tagNav .tags {
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto; }
+      #tagNav .tags header {
+        padding-top: 20px; }
+      #tagNav .tags li {
+        list-style: none;
+        padding: 10px;
+        border-bottom: dotted 1px; } }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1238px) {
   #mainContent {
-    text-align: right;
-    padding-top: 20px; }
+    background-color: white;
+    float: left;
+    margin-left: 30px; }
     #mainContent .mainHeading {
       width: 900px;
       margin-right: 60px;
@@ -3084,7 +3119,7 @@ body {
         #mainContent .container .content .feed-card {
           float: left;
           margin-bottom: 20px;
-          width: 200px;
+          width: 213.5px;
           margin-right: 15px;
           margin-left: 0px; }
           #mainContent .container .content .feed-card:nth-child(4n) {
@@ -3094,7 +3129,7 @@ body {
             position: relative;
             min-height: 200px; }
             #mainContent .container .content .feed-card .feed-image img {
-              width: 200px;
+              width: 213.5px;
               max-height: 200px;
               margin-left: auto;
               margin-right: auto; }
@@ -3128,6 +3163,7 @@ body {
 
 @media screen and (min-width: 1000px) {
   #footer {
+    clear: both;
     padding: 50px 0 0 0;
     text-align: left; }
     #footer .footer-links {

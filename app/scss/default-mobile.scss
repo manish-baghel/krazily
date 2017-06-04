@@ -90,6 +90,11 @@ body{
 #bottom-header{
     background-color:#feffff; 
     #logo{
+        a{
+            &:hover{
+                cursor: pointer;
+            }
+        }
         float: left;
     }
     .hidden{
