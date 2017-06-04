@@ -14,9 +14,9 @@
         navMiddle.classList.toggle("activemiddle");
         navBottom.classList.toggle("activebottom");
         sidebar.classList.toggle("hiddenSidebar");
-//        bannerOverlay.classList.toggle("hidden");
-//        banner.classList.toggle('blur');
-//        feed.classList.toggle('blur');
+        bannerOverlay.classList.toggle("hidden");
+        banner.classList.toggle('blur');
+        feed.classList.toggle('blur');
         innerMainContent.classList.toggle('blur');
         window.addEventListener('scroll', noscroll);
         w = window.innerWidth;
