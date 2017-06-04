@@ -13,17 +13,18 @@
         navTop.classList.toggle("activetop");
         navMiddle.classList.toggle("activemiddle");
         navBottom.classList.toggle("activebottom");
-        window.addEventListener('scroll', noscroll);
+        
         sidebar.classList.toggle("hiddenSidebar");
         bannerOverlay.classList.toggle("hidden");
         banner.classList.toggle('blur');
         feed.classList.toggle('blur');
-        innerMainContent.classList.toggle('blur');
         window.addEventListener('scroll', noscroll);
+        
         w = window.innerWidth;
         if(sidebar.classList.contains("hiddenSidebar") || w > 1309){
           window.removeEventListener('scroll', noscroll);
         }
+        innerMainContent.classList.toggle('blur');
         console.log(w);
     }
     
