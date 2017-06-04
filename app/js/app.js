@@ -13,6 +13,7 @@
         navTop.classList.toggle("activetop");
         navMiddle.classList.toggle("activemiddle");
         navBottom.classList.toggle("activebottom");
+        window.addEventListener('scroll', noscroll);
         sidebar.classList.toggle("hiddenSidebar");
         bannerOverlay.classList.toggle("hidden");
         banner.classList.toggle('blur');

@@ -2393,7 +2393,7 @@ body {
           #sidebar .navbar ul a:visited {
             text-decoration: none; }
         #sidebar .navbar ul li {
-          margin: 40px 0px 10px 0; } }
+          margin: 20px 0px 10px 0; } }
 
 @media screen and (max-width: 1309px) {
   #sidebar.hiddenSidebar {
