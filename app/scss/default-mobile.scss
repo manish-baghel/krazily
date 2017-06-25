@@ -9,6 +9,9 @@
   display: table;
   clear: both;
 }
+.hidden{
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;
@@ -17,14 +20,51 @@
 body{
     font-family:sans-serif;
 }
-.blur{
-    filter: blur(30px);
-}
 #top-header{
     max-height: 50px;
     background-color:#e4e5e6;
     padding: 8px 30px 10px 30px;
     .social-media-links{
+        a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            i{
+                color:#40579d;
+                display: block;
+                float: left;
+                margin: 0;
+            }
+            .fblogo{
+                display: block;
+                float: left;
+                width: 30px;
+                font-size: 1.7em;
+                padding: 2px 0px 0px 15px;;
+            }
+            
+            .fblogin{
+                display: block;
+                float: left;
+                margin-top: 2px;
+                border-left: 1px solid #e4e5e6;
+                height: 28px;
+                border-bottom-right-radius: 3px;
+                border-top-right-radius: 3px;
+                padding: 2px 6px 0 8px;
+                background-color: #40579d;
+                span{
+                    font-size: 1.2em;
+                    color: #e4e5e6;
+                    font-weight: 300;
+                }
+            }
+            @media screen and (max-width:450px){
+                .fblogin{
+                    display: none;
+                }
+            }
+        }
         float: right;
     }
     .content-links{
@@ -34,22 +74,22 @@ body{
         word-spacing: 5px;
     }
 }
-    .hidden{
-        display: none;
-    }
 #sidebar{
-    width: 100%;
-    background-color: rgba(black,0.1);
-    height: 100%;
+    width: 250px;
+    background: linear-gradient(45deg,#050805,#b70a0b);
+    border-top-width: 1px;
+    border-right: 0px;
     z-index: 500;
-    position: fixed;
+    height: 500px;
+    box-shadow: 2px grey 1px;
+    position: absolute;
     overflow: hidden;
-
-        transition: width 0.3s;    right: 0;
-    @media screen and (max-width:1309px){
+    transition: height 0.5s ease,wi2th 0.1s ease;    
+    right: 0;
+    @media screen and (max-width:1209px){
     .navbar{
         z-index: 500;
-//        margin-left: 60%;
+//      margin-left: 60%;
         position: absolute;
         top: 0px;
         background-color:inherit;
@@ -63,15 +103,17 @@ body{
             a{
                 text-decoration: none;
                 color: orange;
-                font-size: 1.75em;
-                font-weight: 600;
-                letter-spacing: 0.1px;
+                font-size: 1.2em;
+                font-weight: 400;
+                letter-spacing: 0.5px;
                 &:visited{
                     text-decoration: none;
                 }
             }
-            li{
+            .nav-button{
                 margin: 20px 0px 10px 0;
+                border-bottom: rgba(orange,0.5) 1px solid;
+                padding-bottom: 10px;
             }
         }
     }
@@ -79,10 +121,17 @@ body{
      
 }
 
-@media screen and (max-width:1309px){
+@media screen and (max-width:1209px){
  #sidebar.hiddenSidebar{
+     height: 0;
      width: 0;
-        transition: width 0.3s;
+     transition: width 0.2s;
+     border-bottom: 0;
+     border-top: 0;
+     li{
+         transform: scale(1.15);
+         transition: transform 0.3s ease;
+     }
     }
 }
 
@@ -102,15 +151,15 @@ body{
     }
             .menu-btn{
                 float: right;
-                padding: 7px;
+                padding: 5px;
                 border-radius: 5px;
-                height: 40px;
-                margin: 20px 20px 0 0;
-                border: solid black 2px;
+                height: 33px;
+                margin: 25px 25px 0 0;
+                border: solid black 0px;
                 .menu-btn-block {
-                    width: 30px;
-                    height: 4px;
-                    background-color: #000;
+                    width: 28px;
+                    height: 3px;
+                    background-color: darkorange;
                     border-radius: 3px;
                     transition: transform 0.3s ease;
                 }
@@ -118,16 +167,17 @@ body{
                     margin: 5px 0 5px 0;
                 }
                 .activetop{
+                    margin-left: -0.6px;
                   transform-origin: center;
-                  transform: translate(1px,10px) rotate(48deg);
-                   
+                  transform: translate(1px,9px) rotate(45deg) scaleX(1.15);
                 }
                 .activemiddle{
                     transform: scale(0);
                 }
                 .activebottom{
                     transform-origin: center;
-                    transform: translate(1px,-8px) rotate(-48deg);
+                    margin-left: -0.6px;
+                    transform: translate(1px,-7px) rotate(-45deg) scaleX(1.15);
                 }
                 
         }
