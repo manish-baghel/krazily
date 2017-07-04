@@ -81,10 +81,9 @@ body{
     border-right: 0px;
     z-index: 500;
     height: 500px;
-    box-shadow: 2px grey 1px;
     position: absolute;
     overflow: hidden;
-    transition: height 0.5s ease,wi2th 0.1s ease;    
+    transition: height 0.5s ease,width 0.2s ease;    
     right: 0;
     @media screen and (max-width:1209px){
     .navbar{
