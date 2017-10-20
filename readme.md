@@ -1,7 +1,8 @@
-Krazily
+Basic Gulp Application by manish_baghel
 
 Don't forget to run $ npm install
 If things don't workout then follow below code:-
+hit npm install else
 DO install various node modules:-
  1.  $ npm install gulp --save-dev
  2.  $ npm install gulp-sass --save-dev

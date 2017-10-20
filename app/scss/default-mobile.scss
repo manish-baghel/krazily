@@ -1,3 +1,6 @@
+:root{
+    --main-font-family: 'Lato', sans-serif;
+}
 @mixin background-size($type){
     background-size: $type;
     -webkit-background-size: $type;
@@ -18,8 +21,15 @@
     box-sizing: border-box;
 }
 body{
-    font-family:sans-serif;
+    font-family: var(--main-font-family);
+    position: relative;
+    background: #f8f8f8;
 }
+a{
+    text-decoration: none;
+}
+
+//Top Header
 #top-header{
     max-height: 50px;
     background-color:#e4e5e6;
@@ -74,15 +84,13 @@ body{
         word-spacing: 5px;
     }
 }
+
+
+//Sidebar section
 #sidebar{
     width: 250px;
-    background: linear-gradient(45deg,#050805,#b70a0b);
-    border-top-width: 1px;
-    border-right: 0px;
     z-index: 500;
-    height: 500px;
     position: absolute;
-    overflow: hidden;
     transition: height 0.5s ease,width 0.2s ease;    
     right: 0;
     @media screen and (max-width:1209px){
@@ -91,13 +99,12 @@ body{
 //      margin-left: 60%;
         position: absolute;
         top: 0px;
-        background-color:inherit;
-        height: 100%;
+        background-color:transparent;
         width: 100% ;    
         padding: 20px;
         text-align: center;
         ul{
-            text-transform: capitalize;
+            text-transform: none;
             list-style: none;
             a{
                 text-decoration: none;
@@ -135,18 +142,18 @@ body{
 }
 
 
-#bottom-header{
-    background-color:#feffff; 
+#main-header{
+    background-color:#FFD101;
     #logo{
         a{
             &:hover{
                 cursor: pointer;
             }
+            img{
+                
+            }
         }
         float: left;
-    }
-    .hidden{
-        display: none;
     }
             .menu-btn{
                 float: right;
@@ -212,7 +219,7 @@ body{
 #feeds{
     padding-top: 30px;
     .container{
-        background-color: #fcfdfe;
+        background-color: transparent;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -220,14 +227,14 @@ body{
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-           background-color: #ffca00;
+           background-color: transparent;
            height: 30px;
             text-align: center;
             padding: 4px;
             span{
                 letter-spacing: 2px;
                 font-size: 1.4em;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 color: white;
             }
             .right{

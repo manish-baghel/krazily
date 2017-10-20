@@ -3,6 +3,8 @@
     <head>
         <title>Krazily</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
         <!--build:css css/styles.min.css-->
         <link rel="stylesheet" href="css/styles.css">
         <!--endbuild-->
@@ -11,25 +13,10 @@
         <!--endbuild-->
     </head>
     <body>
-        
-        <!--TopHeader -->
-        <section id="top-header" class="clearfix">
-            <div class="social-media-links clearfix">
-                <a href="#" class="clearfix">
-                   <i class="fa fa-facebook-official fa-2x"></i>
-<!--                    <span class="fblogo">f</span>-->
-                    <div class="fblogin"><span>Login with facebook</span></div>
-                </a>
-            </div>
-            <div class="content-links">
-                <span>GLOBAL | DESI</span>
-            </div>
-        </section>
-
-        <!--bottom header-->
-        <section id="bottom-header" class="clearfix">
+        <!--Header-->
+        <section id="main-header" class="clearfix">
             <div id="logo">
-            <a href="index.html"><img src="images/logo.jpg" alt="logo"></a>
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
             </div>
             <a href="#" class="menu-btn" id="nav_button">
                 <div class="menu-btn-block top" id="nav_top"></div>
@@ -42,14 +29,21 @@
         <section id="sidebar" class="hiddenSidebar">
             <div class="navbar" id="navbar">
                 <ul>
-                    <a href="inner.html"><li class="nav-button">Trending</li></a>
-                    <a href="#"><li class="nav-button">standup</li></a>
-                    <a href="#"><li class="nav-button">anime</li></a>
-                    <a href="#"><li class="nav-button">short films</li></a>
-                    <a href="#"><li class="nav-button">funny clips</li></a>
-                    <a href="#"><li class="nav-button">pics</li></a>
-                    <a href="#"><li class="nav-button">jokes</li></a>
-                    <a href="#"><li class="nav-button marginright0" style="border-bottom:0;">upload</li></a>
+                    <a href="inner.html"><li class="nav-button active">home</li></a>
+                    <a href="#"><li class="nav-button">classic</li></a>
+                    <a href="#"><li class="nav-button">indian</li></a>
+                    <a href="#"><li class="nav-button">hindi</li></a>
+                    <a href="#"><li class="nav-button">alternative</li></a>
+                    <a href="#"><li class="nav-button">dark</li></a>
+                    <a href="#"><li class="nav-button">blue</li></a>
+                    <a href="#"><li class="nav-button">character</li></a>
+                    <a href="#"><li class="nav-button">insult</li></a>
+                    <a href="#"><li class="nav-button">slapstick</li></a>
+                    <a href="#"><li class="nav-button">spoof</li></a>
+                    <a href="#"><li class="nav-button">sitcom</li></a>
+                    <a href="#"><li class="nav-button">wit</li></a>
+                    <a href="#"><li class="nav-button">indie</li></a>
+                    <a href="#"><li class="nav-button marginright0" style="border-bottom:0;">misc</li></a>
                 </ul>
             </div>
         </section>
@@ -59,14 +53,14 @@
         <!-- home_banner-->
         <section id="banner">
             <div id="banner-overlay">
-                <div class="first_heading">Welcome to the world's only social</div>
+                <div class="first_heading">Welcome to World's only social</div>
                 <div class="first_heading">network for comedy!</div>
-                <br><div class="second_heading">Go krazily!</div>
+                <br><div class="second_heading">Go Krazily!</div>
             </div>
         </section>
         
         <!-- feeds-->
-        
+<!--Note font-awesome to be replaced with custom images -->
         <section id="feeds">
             <div class="container clearfix">
                 <header class="container_header clearfix">
@@ -74,7 +68,8 @@
                         Trending
                     </span>
                     <span class="right">
-                        MORE VIDEOS +
+                        Discover
+                        <img src="" alt="">
                     </span>
                 </header>
                 <div class="content clearfix">
@@ -82,7 +77,7 @@
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/Tr_1.jpg">
+                            <img src="" alt="">
                         </div>
                         <div class="feed-content">
                             <header>
@@ -97,7 +92,7 @@
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/Tr_2.jpg">
+                            <img src="" alt="">
                         </div>
                         <div class="feed-content">
                             <header>
@@ -112,7 +107,7 @@
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/Tr_3.jpg">
+                            <img src="" alt="">
                         </div>
                         <div class="feed-content">
                             <header>
@@ -127,7 +122,7 @@
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/Tr_4.jpg">
+                            <img src="" alt="">
                         </div>
                         <div class="feed-content">
                             <header>
@@ -147,7 +142,7 @@
                         Stand Up
                     </span>
                     <span class="right">
-                        MORE VIDEOS +
+                        Discover
                     </span>
                 </header>
                 <div class="content clearfix">
@@ -220,7 +215,7 @@
                        Anime 
                     </span>
                     <span class="right">
-                       MORE VIDEOS + 
+                       Discover 
                     </span>
                 </header>
                 <div class="content clearfix">

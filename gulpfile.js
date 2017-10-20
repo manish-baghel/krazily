@@ -23,7 +23,7 @@ gulp.task('sass', function(){
 });
 
 
-//watch task
+// watch task
 gulp.task('watch',['browserSync','sass'], function(){
    gulp.watch('app/scss/**/*.scss',['sass']);
    gulp.watch('app/*.html',browserSync.reload);
@@ -99,6 +99,6 @@ gulp.task('build',function(){
 
 //default task to run
 gulp.task('default',function(callback){
-    runSequence(['sass','browserSync','watch'],callback)
+    runSequence(['sass','watch'],callback)
 });
 

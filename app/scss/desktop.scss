@@ -30,43 +30,46 @@
 }
 @media screen and (min-width:1210px){
     #sidebar{
-         width: 950px;
-         background-color: white;
-         height: 60px;
-        transition: width 0.3s ease;
-        border: 0;
+         width: 300px;
+         background: transparent;
+         padding: 20px 20px 20px 15px;
+         transition: width 0.3s ease;
+         border: 0;
          z-index: 500;
          position: absolute;
-         top: 60px;
-         right: 60px;
+         top: 92px;
+         left: 0px;
     .navbar{
-        display: inline-block;
+        display: block;
         position: absolute;
-        background-color: #feffff;
-        height: 60px;
-        width: 100%;
-        padding: 5px 0px 5px 5px;
-        margin-left: 0px;
+        background: transparent;
+        width: 250px;
         margin-right: 0;
         text-align: left;
         ul{
             list-style: none;
             width: 100%;
             .nav-button{
-                display: inline-block;
+                display: block;
+                padding: 13px 59px 9px 20px;
+                width: 100%;
+                height: 44px;
                 text-transform: capitalize;
-                font-size: 1.5em;
-                letter-spacing: 0.5px;
+                font-size: 18px;
+                letter-spacing: 0.22px;
                 font-weight: 300;
-              
-                color: orange;
-                margin: 10px 3% 10px 0;
+                color: #32485F;
+                border-radius: 2px;
                 &:nth-child(8){
                     margin-right: 0;
                 }
                 &:hover{
                 cursor: pointer;
                 }
+            }
+            .active{
+                background: #FFD101;
+                font-weight: bolder;
             }
             .marginright0{
                 margin-right: 0;
@@ -75,12 +78,13 @@
     }
     }
     
-    #bottom-header{
-        height: 85px;
+    #main-header{
+        height: 92px;
     #logo{
+        padding-top: 15px;
         margin-left: 0px;
         @media screen and (min-width:1309px){
-            margin-left: 70px;
+            margin-left: 50px;
         }
         img{
         }
@@ -98,25 +102,24 @@
 #banner{
     @include background-size(cover);
     white-space: nowrap;
-    height: 600px;
-    background-position: center;
-    background-attachment: fixed;
-    background-image: url("../images/banner.jpg");    
+    height: 444px;
+    margin-left: 300px;
+    background-image: url("../images/Group%202.png");    
     #banner-overlay{
         background: linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0.1),rgba(0,0,0,0));
-        height: 600px;
         text-align: center;
-        padding-top: 200px;
+        height: 100%;
+        padding-top: 86px;
         div{
-            font-size: 2.75em;
             color: white;
-            text-transform: uppercase;
+            text-transform: none;
         }
         .first_heading{
+            font-size: 72px;
             font-weight:600;
         }
         .second_heading{
-            font-size: 2.2em;
+            font-size: 36px;
             font-weight: 300;
         }
     }
@@ -126,62 +129,82 @@
 
 @media screen and (min-width:1025px){
     #feeds{
-    padding-top: 40px;
-    .container{
-        width: 1045px;
-        .container_header{
-            height: 50px;
+        margin-left: 300px;
+        padding-top: 40px;
+        .container{
             width: 100%;
-            padding: 10px 20px 10px 20px;
-            text-transform: uppercase;
-            span{
-                font-size: 1.4em;
-                color: white;
-            }
-            .left{
-                float: left;
-            }
-            .right{
-                display: block;
-                float: right;
-                font-weight: 400;
-                font-size: 1.1em;
-            }
-        }
-                .content{
-                    width: 100%;
-                    margin-top: 20px;
-                    margin-bottom: 80px;
+            .container_header{
+                height: 42px;
+                width: 100%;
+                padding: 5px 20px 10px 0px;
+                text-transform: capitalize;
+                span{
                     text-align: left;
-                .feed-card{
-                    &:nth-child(2n){
-                margin-left: 0px;
+                    color: #1B2733;
+                }
+                .left{
+                    float: left;
+                    font-size: 24px;
+                    width: 287px;
+                    border-left: solid #6A2FE5 8px;
+                    padding-left: 10px;
+                }
+                .right{
+                    display: block;
+                    float: right;
+                    width: 101px;
+                    height: 32px;
+                    padding: 7px 0px 8px 7px;
+                    background: #FFD101;
+                    border-radius: 2px;
+                    font-size: 14px;
+                    img{
+                        height: 22px;
+                        width: 22px;
+                    }
+                }
             }
+            .content{
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 80px;
+                overflow: scroll;
+                text-align: left;
+                .feed-card{
+                    overflow: scroll;
+                    &:nth-child(2n){
+                    margin-left: 0px;
+                    }
                     float: left;
                     margin-bottom: 20px;
-                    width: 250px;
-                    margin-right: 15px;
+                    width: 390px;
+                    margin-right: 30px;
                     margin-left: 0px;
                     &:nth-child(4n){margin-right: 0px; margin-left: 0px;}
                     .feed-image{
                         position: relative;
+                        box-shadow: 0 2px 35px 0 rgba(0,0,0,0.10);
+                        background-color: #ffffff;
                         img{
-                            width: 250px;
-                            max-height: 250px;
+                            width: 390px;
+                            max-height: 212px;
                             margin-left: auto;
                             margin-right: auto;
                         }
                         .feed-overlay{
                             position: absolute;
                             width: 100%;
-                            height: 250px;
+                            height: 212px;
                             z-index: 200;
                             &:hover{
                                 background-color: rgba(256,256,256,0.4);
                                 cursor: pointer;
                             }
                         }
-                        min-height: 200px;
+                        height: 212px;
+                        i{
+                            color: #FFD101;
+                        }
                     }
                     .feed-content{
                         margin-top: 30px;
