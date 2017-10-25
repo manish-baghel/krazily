@@ -1,3 +1,8 @@
+//jQueryCode
+
+
+
+
 (function appinstance(){
     var navBtn, navTop, navMiddle, navBottom, sidebar,w,bannerOverlay;
     document.addEventListener('DOMContentLoaded',function(){
@@ -21,7 +26,6 @@
         if(sidebar.classList.contains("hiddenSidebar") || w > 1309){
           window.removeEventListener('scroll', noscroll);
         }
-        innerMainContent.classList.toggle('blur');
         console.log(w);
     }
     

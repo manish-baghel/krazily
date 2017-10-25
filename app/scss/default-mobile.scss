@@ -29,121 +29,137 @@ a{
     text-decoration: none;
 }
 
-//Top Header
-#top-header{
-    max-height: 50px;
-    background-color:#e4e5e6;
-    padding: 8px 30px 10px 30px;
-    .social-media-links{
-        a{
-            text-decoration: none;
-            color: white;
-            display: block;
-            i{
-                color:#40579d;
-                display: block;
-                float: left;
-                margin: 0;
-            }
-            .fblogo{
-                display: block;
-                float: left;
-                width: 30px;
-                font-size: 1.7em;
-                padding: 2px 0px 0px 15px;;
-            }
-            
-            .fblogin{
-                display: block;
-                float: left;
-                margin-top: 2px;
-                border-left: 1px solid #e4e5e6;
-                height: 28px;
-                border-bottom-right-radius: 3px;
-                border-top-right-radius: 3px;
-                padding: 2px 6px 0 8px;
-                background-color: #40579d;
-                span{
-                    font-size: 1.2em;
-                    color: #e4e5e6;
-                    font-weight: 300;
-                }
-            }
-            @media screen and (max-width:450px){
-                .fblogin{
-                    display: none;
-                }
-            }
-        }
-        float: right;
-    }
-    .content-links{
-        float: left;
-        padding-top: 10px;
-        letter-spacing: 1px;
-        word-spacing: 5px;
-    }
-}
-
 
 //Sidebar section
 #sidebar{
-    width: 250px;
+    width: 100%;
+    transform: translateX(0);
     z-index: 500;
     position: absolute;
-    transition: height 0.5s ease,width 0.2s ease;    
-    right: 0;
+    transition: transform 0.3s ease;    
+    left: 0;
     @media screen and (max-width:1209px){
     .navbar{
         z-index: 500;
-//      margin-left: 60%;
-        position: absolute;
+        position: relative;
         top: 0px;
-        background-color:transparent;
+        background-color:#fff;
         width: 100% ;    
         padding: 20px;
-        text-align: center;
+        padding-top: 60px;
+        text-align: left;
         ul{
+            margin-left: 12px;
+            margin-top: 25px;
             text-transform: none;
             list-style: none;
             a{
                 text-decoration: none;
-                color: orange;
-                font-size: 1.2em;
-                font-weight: 400;
-                letter-spacing: 0.5px;
                 &:visited{
                     text-decoration: none;
                 }
             }
             .nav-button{
-                margin: 20px 0px 10px 0;
-                border-bottom: rgba(orange,0.5) 1px solid;
-                padding-bottom: 10px;
+                margin-top: 25px;
+                display: block;
+                padding: 0px;
+                width: 100%;
+                height: 25px;
+                text-transform: capitalize;
+                font-size: 18px;
+                letter-spacing: 0.22px;
+                font-weight: 300;
+                color: #32485F;
+                border-radius: 2px;
+                &:hover{
+                cursor: pointer;
+                }
+            }
+            .active{
+                background: transparent;
+                font-weight: bolder;
             }
         }
     }
+        .sidebar-tag-section{
+            z-index: 600;
+            margin-left: 2px;
+            margin-top: 25px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            input[type="search"]{
+                height: 42px;
+                width:90%;
+                margin: 0px 12px 0px 12px;
+                background: #FFFFFF;
+                border: 1px solid #6A2FE5;
+                border-radius: 2px;
+                background-image: url("../images/Bitmap.png");
+                background-repeat: no-repeat;
+                background-position: 10px 9px;
+                background-size: 20px auto;
+                padding:0px 7px 0px 40px;
+                font-size: 14px;
+                color: #32485F;
+                letter-spacing: 0.17px;
+                &::placeholder{
+                    font-size: 12px;
+                    color: #98A3AF;
+                    letter-spacing: 0.15px;
+                    font-weight: lighter;
+                }
+                &:focus{
+                   border: 1px solid #6A2FE5;
+                   border-radius: 2px;
+                    outline: none;
+                }
+                &::-webkit-search-cancel-button {
+                    -webkit-appearance:none;//clear defaults
+                    height: 21px;
+                    width: 21px;
+                    background-image: url("../images/search-cancel.png");
+                    background-repeat: no-repeat;
+                    background-size: 21px auto;
+                    opacity: 0.8;
+                }
+            }
+        }
     }
      
 }
 
 @media screen and (max-width:1209px){
  #sidebar.hiddenSidebar{
-     height: 0;
-     width: 0;
-     transition: width 0.2s;
+     transform: translateX(-100%);
+     transition: transform 0.3s;
      border-bottom: 0;
      border-top: 0;
-     li{
-         transform: scale(1.15);
-         transition: transform 0.3s ease;
+     .navbar{
+         width: 0;
+         padding: 0;
+         height: 0;
+         ul{
+             width: 0;
+             li{
+                 width: 0;
+                 display: none;
+                 transform: scale(1.15);
+                 transition: transform 0.3s ease;
+             }
+         }
      }
+     .sidebar-tag-section{
+            display: none;
+    }
+     
     }
 }
 
 
 #main-header{
     background-color:#FFD101;
+    height: 77px;
     #logo{
         a{
             &:hover{
@@ -156,16 +172,16 @@ a{
         float: left;
     }
             .menu-btn{
-                float: right;
-                padding: 5px;
-                border-radius: 5px;
-                height: 33px;
-                margin: 25px 25px 0 0;
+                float: left;
+                border-radius: 0px;
+                width: 22px;
+                height: 17px;
+                margin: 29px 25px 0 16px;
                 border: solid black 0px;
                 .menu-btn-block {
-                    width: 28px;
-                    height: 3px;
-                    background-color: darkorange;
+                    width: 22px;
+                    height: 2px;
+                    background-color: #1B2733;
                     border-radius: 3px;
                     transition: transform 0.3s ease;
                 }
@@ -194,29 +210,41 @@ a{
     @include background-size(cover);
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("../images/banner.jpg");
-    height: 300px;
+    background-image: url("../images/Group%202.png");
+    height:200px;
     #banner-overlay{
         background: linear-gradient(to left,rgba(0,0,0,0.5),rgba(0,0,0,0.1),rgba(0,0,0,0));
-        height: 300px;
-        padding-top: 120px;
+        height: 200px;
+        padding-top: 40px;
         text-align: center;
         div{
-            font-size: 0.9em;
+            margin-left: 20px;
+            margin-right: 20px;
             color: white;
             text-transform: uppercase;
         }
         .first_heading{
-            font-weight:600;
+            font-weight: 400;
+            word-break: keep-all;
+            word-wrap: break-word;
+            font-size: 24px;
+            color: #FFFFFF;
+            letter-spacing: 0.29px;
+            text-shadow: 0 2px 9px rgba(0,0,0,0.29);
         }
         .second_heading{
-            font-size: 0.8em;
+            font-size: 18px;
             font-weight: 300;
+            color: #FFFFFF;
+            letter-spacing: 0.22px;
+            text-shadow: 0 2px 9px rgba(0,0,0,0.29);
+            
         }
     }
 }
 
 #feeds{
+    margin-left: 0;
     padding-top: 30px;
     .container{
         background-color: transparent;
@@ -227,18 +255,40 @@ a{
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-           background-color: transparent;
-           height: 30px;
-            text-align: center;
-            padding: 4px;
+            background-color: transparent;
+            border-left: solid #6A2FE5 8px;
+            height: 25px;
+            padding: 0;
             span{
-                letter-spacing: 2px;
-                font-size: 1.4em;
-                text-transform: capitalize;
-                color: white;
+                text-align: left;
+                color: #1B2733;
+            }
+            .left{
+                float: left;
+                font-family: Lato;
+                font-size: 16px;
+                color: #1B2733;
+                letter-spacing: 0.2px;
+                min-width: 80px;
+                font-weight: 600;
+                padding-left: 0px;
+                margin: 3px 7px;
             }
             .right{
-                display: none;
+                display: block;
+                float: right;
+                width: 101px;
+                height: 25px;
+                padding: 6px 0px 5px 11px;
+                background: #FFD101;
+                color: #1B2733;
+                border-radius: 2px;
+                letter-spacing: 0.15px;
+                font-size: 12px;
+                img{
+                    height: 22px;
+                    width: 22px;
+                }
             }
         }
         .content{
@@ -246,15 +296,16 @@ a{
             margin-left: auto;
             margin-right: auto;
             padding-top: 30px;
-            text-align: center;
+            text-align: left;
             .feed-card{
+                width: 100%;
                 margin-bottom: 30px;
                 .feed-image{
                     width: 100%;
                     position: relative;
                     text-align: center;
                     img{
-                        width: 330px;
+                        width: 100%;
                         @media only screen and (max-width: 413px) {
                             width: 100%;
                             height: 300px;
@@ -270,6 +321,7 @@ a{
                       }
                 }
                 .feed-content{
+                    width: 100%;
                     header{
                         font-size: 1.1em;
                         color: #5b5b5b;
@@ -278,14 +330,73 @@ a{
                         font-weight: 600;
                     }
                     text-align: left;
-                    p{
-                        text-align: left;
-                        margin-top: 15px;
-                        color: gray;
-                        letter-spacing: 0.5px;
-                        line-height: 30px;
-                    }
+                    .tags{
+                            margin-top: 8px;
+                            line-height: 17px;
+                            max-height: 18px;
+                            overflow: hidden;
+                            max-width: 390px;
+                            tag{
+                                display: inline;
+                                height: 100%;
+                                color: #2e4760;//Custom color applied
+                                font-size: 14px;
+                                word-break: break-all;
+                                font-weight: 400;
+                                margin-right: 17px;
+                                &:before{
+                                    content: '#';
+                                    color: #6A2FE5;
+                                    font-size: 14px;
+                                    
+                                }
+                            }
+                        }
+                    .stats{
+                            height: 24px;
+                            width: 100%;
+                            margin-top: 9px;
+                            .lol-icon{
+                                width: 38px;
+                                height: 24px;
+                                float: left;
+                            }
+                            .lol-counter{
+                                font-size: 12px;
+                                color: #141E00;
+                                margin-left: 6px;
+                                line-height: 17px;
+                                vertical-align: middle;
+                                margin-top:3px;
+                                float: left;
+                            }
+                            .comment-icon{
+                                height: 18px;
+                                width: 18px;
+                                margin-right: 6px;
+                                vertical-align: middle;
+                                margin-top:3px;
+                                float: right;
+                            }
+                            .comment-counter{
+                                font-family: Lato-Regular;
+                                font-size: 0px;
+                                color: #32485F;
+                                vertical-align: middle;
+                                margin-top:3px;
+                                float: right;
+                                span{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
                 }
+            }
+            .owl-nav{
+                display: none;
+            }
+            .owl-dots{
+                display: none;
             }
         }
     }
@@ -343,13 +454,13 @@ a{
         }
     }
     .footer-black{
-        background-color: black;
+        background-color: #1B2733;
         margin-top: 20px;
         text-transform: uppercase;
         color: white;
         text-align: center;
-        height: 40px;
-        padding-top: 10px;
+        height: 43px;
+        padding-top: 13px;
         font-size: 0.9em;
     }
 }

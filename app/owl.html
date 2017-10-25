@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Owl</title>
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.default.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+</head>
+<body>
+<div class="owl-carousel owl-theme">
+    <div class="item-video"><a class="owl-video" href="https://vimeo.com/23924346"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
+    <div class="item-video"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
+</div>
+<script type="text/javascript">
+$('.owl-carousel').owlCarousel({
+        items:1,
+        merge:true,
+        loop:false,
+        margin:10,
+        video:true,
+        lazyLoad:true,
+        center:true,
+        responsive:{
+            480:{
+                items:2
+            },
+            600:{
+                items:4
+            }
+        }
+    });
+</script>
+</body>
+</html>

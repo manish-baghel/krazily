@@ -5,24 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.default.css">
         <!--build:css css/styles.min.css-->
         <link rel="stylesheet" href="css/styles.css">
         <!--endbuild-->
+        <script src="js/jquery.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
         <!--build:js js/app.min.js-->
         <script src="js/app.js"></script>
         <!--endbuild-->
+        
     </head>
     <body>
         <!--Header-->
         <section id="main-header" class="clearfix">
-            <div id="logo">
-            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-            </div>
-            <a href="#" class="menu-btn" id="nav_button">
+           <a href="#" class="menu-btn" id="nav_button">
                 <div class="menu-btn-block top" id="nav_top"></div>
                 <div class="menu-btn-block middle" id="nav_middle"></div>
                 <div class="menu-btn-block bottom" id="nav_bottom"></div>
             </a>
+            <div id="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            
         </section>
         
         <!-- Sidebar -->
@@ -43,8 +49,13 @@
                     <a href="#"><li class="nav-button">sitcom</li></a>
                     <a href="#"><li class="nav-button">wit</li></a>
                     <a href="#"><li class="nav-button">indie</li></a>
-                    <a href="#"><li class="nav-button marginright0" style="border-bottom:0;">misc</li></a>
+                    <a href="#"><li class="nav-button" style="border-bottom:0;">misc</li></a>
                 </ul>
+            </div>
+            <div class="sidebar-tag-section">
+                <input type="search" id="tagSearch" placeholder="Search for a word tag here">
+                <div class="static-tags"></div>
+                <div class="dynamic-tags"></div>
             </div>
         </section>
         
@@ -53,8 +64,7 @@
         <!-- home_banner-->
         <section id="banner">
             <div id="banner-overlay">
-                <div class="first_heading">Welcome to World's only social</div>
-                <div class="first_heading">network for comedy!</div>
+                <div class="first_heading">Welcome to World's only social network for comedy!</div>
                 <br><div class="second_heading">Go Krazily!</div>
             </div>
         </section>
@@ -65,6 +75,551 @@
             <div class="container clearfix">
                 <header class="container_header clearfix">
                     <span class="left">
+                        Featured
+                    </span>
+                    <span class="right">
+                        Discover
+                        <img src="" alt="">
+                    </span>
+                </header>
+                <div class="content clearfix owl-carousel owl-theme">
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                               Lorem Ipsum Dolor 
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <header class="container_header clearfix">
+                    <span class="left">
+                        Standup
+                    </span>
+                    <span class="right">
+                        Discover
+                        <img src="" alt="">
+                    </span>
+                </header>
+                <div class="content clearfix owl-carousel owl-theme">
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                               Lorem Ipsum Dolor 
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <header class="container_header clearfix">
+                    <span class="left">
+                        Classic
+                    </span>
+                    <span class="right">
+                        Discover
+                        <img src="" alt="">
+                    </span>
+                </header>
+                <div class="content clearfix owl-carousel owl-theme">
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                               Lorem Ipsum Dolor 
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <header class="container_header clearfix">
+                    <span class="left">
+                        Indian
+                    </span>
+                    <span class="right">
+                        Discover
+                        <img src="" alt="">
+                    </span>
+                </header>
+                <div class="content clearfix owl-carousel owl-theme">
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                               Lorem Ipsum Dolor 
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <header class="container_header clearfix">
+                    <span class="left">
+                        User Uploads
+                    </span>
+                    <span class="right">
+                        Discover
+                        <img src="" alt="">
+                    </span>
+                </header>
+                <div class="content clearfix owl-carousel owl-theme">
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                               Lorem Ipsum Dolor 
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-card owl-item">
+                        <div class="feed-image">
+                            <div class="feed-overlay"></div>
+                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
+                            <img src="" alt="">
+                        </div>
+                        <div class="feed-content">
+                            <header>
+                                Lorem Ipsum Dolor
+                            </header>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <header class="container_header clearfix">
+                    <span class="left">
                         Trending
                     </span>
                     <span class="right">
@@ -72,8 +627,8 @@
                         <img src="" alt="">
                     </span>
                 </header>
-                <div class="content clearfix">
-                    <div class="feed-card card-one">
+                <div class="content clearfix owl-carousel owl-theme">
+                    <div class="feed-card owl-item">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
@@ -83,12 +638,21 @@
                             <header>
                                Lorem Ipsum Dolor 
                             </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
                         </div>
                     </div>
-                    <div class="feed-card card-two">
+                    <div class="feed-card owl-item">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
@@ -98,12 +662,21 @@
                             <header>
                                 Lorem Ipsum Dolor
                             </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
                         </div>
                     </div>
-                    <div class="feed-card card-three">
+                    <div class="feed-card owl-item">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
@@ -113,12 +686,21 @@
                             <header>
                                 Lorem Ipsum Dolor
                             </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
+                            <div class="tags">
+                                <tag>LongTagExample</tag>
+                                <tag>LongTag</tag>
+                                <tag>LongTagName</tag>
+                                <tag>LongTagExample</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
                         </div>
                     </div>
-                    <div class="feed-card card-four">
+                    <div class="feed-card owl-item">
                         <div class="feed-image">
                             <div class="feed-overlay"></div>
                             <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
@@ -128,156 +710,18 @@
                             <header>
                                 Lorem Ipsum Dolor
                             </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container">
-                <header class="container_header">
-                    <span class="left">
-                        Stand Up
-                    </span>
-                    <span class="right">
-                        Discover
-                    </span>
-                </header>
-                <div class="content clearfix">
-                    <div class="feed-card card-one">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/St_1.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                               Lorem Ipsum Dolor 
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feed-card card-two">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/St_2.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feed-card card-three">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/St_3.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feed-card card-four">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/St_4.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container">
-                <header class="container_header">
-                    <span class="left">
-                       Anime 
-                    </span>
-                    <span class="right">
-                       Discover 
-                    </span>
-                </header>
-                <div class="content clearfix">
-                    <div class="feed-card card-one">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/An_1.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feed-card card-two">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/An_2.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feed-card card-three">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <img src="images/An_3.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="feed-card card-four">
-                        <div class="feed-image">
-                            <div class="feed-overlay"></div>
-                            <i class="fa fa-play-circle-o fa-7x" aria-hidden="true"></i>
-                            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                            <img src="images/An_4.jpg">
-                        </div>
-                        <div class="feed-content">
-                            <header>
-                                Lorem Ipsum Dolor
-                            </header>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar, erat eget fringilla consequat, dolor magna tempus lorem, quis sagittis ligula nulla dapibus massa. Vestibulum congue ultricies vestibulum. Ut sagittis blandit dolor sed hendrerit. Duis sed laoreet velit. Ut auctor est libero, in ultrices ipsum lobortis eget.
-                            </p>
+                            <div class="tags">
+                                <tag>Desi</tag>
+                                <tag>Biswa</tag>
+                                <tag>Standup</tag>
+                                <tag>Hyderabad</tag>
+                            </div>
+                            <div class="stats">
+                                <img src="images/" alt="" class="lol-icon">
+                                <div class="lol-counter"><span>23K</span> people have LoLed</div>
+                                <div class="comment-counter"><span>999</span> comments</div>
+                                <img src="images/Group%204%20Copy%202.png" alt="" class="comment-icon">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -286,13 +730,36 @@
         
         <!-- footer -->
         <section id="footer" class="clearfix">
-            <div class="footer-links clearfix">
+           <div class="container clearfix">
+              <div class="footer-links clearfix">
                 <ul class="links">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Privacy</li>
-                    <li>Terms</li>
-                    <li>Help</li>
+                    <li><div class="link-icon"><i class="fa fa-home"></i></div>Home</li>
+                    <li><div class="link-icon"><i class="fa fa-info"></i></div>About Us</li>
+                    <li><div class="link-icon"><i class="fa fa-lock"></i></div>Privacy Policy</li>
+                    <li><div class="link-icon"><i class="fa fa-book"></i></div>Terms &amp; Condition</li>
+                    <li><div class="link-icon"><i class="fa fa-warning"></i></div>Disclaimer</li>
+                </ul>
+            </div>
+            <div class="categories-links clearfix">
+               <header>Categories</header>
+                <ul class="links">
+                    <li>Classic</li>
+                    <li>Indian</li>
+                    <li>Hindi</li>
+                    <li>Alternative</li>
+                    <li>Dark</li>
+                    <li>Blue</li>
+                    <li>Character</li>
+                    <li>Insult</li>
+                </ul>
+                <ul class="links links-right">
+                    <li>Slapstick</li>
+                    <li>Spoof</li>
+                    <li>Sitcom</li>
+                    <li>Satire</li>
+                    <li>Wit</li>
+                    <li>Indie</li>
+                    <li>Misc</li>
                 </ul>
             </div>
             <div class="form">
@@ -301,16 +768,48 @@
                     <input type="text" placeholder="Name">
                     <input type="email" placeholder="Email">
                     <textarea placeholder="Message" class="message"></textarea>
+                    <input type="submit" value="Send" id="send-button">
                 </form>
             </div>
             <div class="social-media">
-                <a href="#">
-                   <i class="fa fa-facebook-official fa-3x" area hidden="true" style="color:#008de0;"></i>
-                </a>
-            </div>
-            <div class="footer-black">
-                copyright @ 2017 krazily
-            </div>
+               <a href="#" id="upload-button">
+                   <button>
+                       Upload Video
+                   </button>
+               </a>
+                <div href="#" id="facebook-login">
+                   <i class="fa fa-facebook-official" area hidden="true"></i>
+                   <span>Facebook Login</span>
+                </div>
+            </div> 
+           </div>
+           <div class="footer-black">copyright @ 2017 krazily</div>
         </section>
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    touchDrag:true,
+    nav: true,
+    navText: ["<img src='images/next.png'>","<img src='images/next.png'>"],
+    responsive : {
+    // breakpoint from 0 up
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:true,
+            loop:true
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:true
+        }
+    }
+});
+</script>
     </body>
 </html>
