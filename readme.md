@@ -1,8 +1,12 @@
-Basic Gulp Application by manish_baghel
+Basic Gulp Application by manish-baghel
+This application uses gulp for automation of various tasks(includinc sass to css conversion)
+Application Content Dorectory is app/
 
+
+/============Setup========================
+Setup:-
 Don't forget to run $ npm install
 If things don't workout then follow below code:-
-hit npm install else
 DO install various node modules:-
  1.  $ npm install gulp --save-dev
  2.  $ npm install gulp-sass --save-dev
@@ -15,3 +19,10 @@ DO install various node modules:-
  9.  $ npm install gulp-cache --save-dev
  10. $ npm install del --save-dev
  11. $ npm install run-sequence --save-dev
+ 
+ 
+ 
+ 
+ /============Start Application========================
+ 
+ Hit $ npm start OR $ gulp
