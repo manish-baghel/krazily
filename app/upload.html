@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/upload_styles.css">
+    <!--endbuild-->
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!--build:js js/app.min.js-->
+    <script src="js/app.js"></script>
+    <!--endbuild-->
+</head>
+<body>
+     <!--Header-->
+        <section id="main-header" class="clearfix">
+           <a href="#" class="menu-btn" id="nav_button">
+                <div class="menu-btn-block top" id="nav_top"></div>
+                <div class="menu-btn-block middle" id="nav_middle"></div>
+                <div class="menu-btn-block bottom" id="nav_bottom"></div>
+            </a>
+            <div id="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            </div>
+            
+        </section>
+    
+<!--   Upload Video    -->
+       <section id="upload-section">
+           <header>
+               Upload a krazy video to your channel
+           </header>
+           <div class="upload-section-content">
+               <div class="link-upload"></div>
+           </div>
+       </section>
+	<style>
+		#search-bar { margin: 1em 0; overflow: hidden; }
+		#search-txt { float: left; width: 60%; }
+		#video-data-1 img { float: right; }
+		#video-data-1 p { white-space: pre-line; }
+	</style>
+	<div id="search-bar">
+		<input id="search-txt" type="text" value="" placeholder="Paste the link here" maxlength="100">
+	</div>
+	<div id="video-data-1"></div>
+	<ul id="video-data-2"></ul>
+	<script>
+		$(function() {      
+			$("#search-txt").bind("paste", function(e) {
+				$("#video-data-1, #video-data-2").empty();
+                var pastedData = e.originalEvent.clipboardData.getData('text');
+                console.log(pastedData);
+				var videoid = pastedData;
+				var matches = videoid.match(/^http:\/\/www\.youtube\.com\/.*[?&]v=([^&]+)/i) || videoid.match(/^https:\/\/www\.youtube\.com\/.*[?&]v=([^&]+)/i) || videoid.match(/^http:\/\/youtu\.be\/([^?]+)/i);
+				if (matches) {
+					videoid = matches[1];
+				}
+				if (videoid.match(/^[a-z0-9_-]{11}$/i) === null) {
+					$("<p style='color: #F00;'>Unable to parse Video ID/URL.</p>").appendTo("#video-data-1");
+					return;
+				}
+				$.getJSON(
+                    "https://www.googleapis.com/youtube/v3/videos",
+                    {
+					   key: "AIzaSyDtB8wY4ISrChLzt5MpLBZRj7GJwJQ05fc",
+					   part: "snippet,contentDetails",
+					   id: videoid
+				    },
+                    function(data) {
+                        console.log(data); //console data
+                        var duration = data.items[0].contentDetails.duration;
+                        function convert_time(duration) {
+                            var a = duration.match(/\d+/g);
+                            if (duration.indexOf('M') >= 0 && duration.indexOf('H') == -1 && duration.indexOf('S') == -1) {
+                                a = [0, a[0], 0];
+                            }
+                            if (duration.indexOf('H') >= 0 && duration.indexOf('M') == -1) {
+                                a = [a[0], 0, a[1]];
+                            }
+                            if (duration.indexOf('H') >= 0 && duration.indexOf('M') == -1 && duration.indexOf('S') == -1) {
+                                a = [a[0], 0, 0];
+                            }
+                            duration = 0;
+                            if (a.length == 3) {
+                                duration = a[0]+ ":" + a[1] + ":"+ a[2];
+                            }
+                            if (a.length == 2) {
+                                duration = a[0]+ ":" + a[1];
+                            }
+                            if (a.length == 1) {
+                                duration = "0" + ":" +a[0];
+                            }
+                            return duration;
+                        }
+					   if (data.items.length === 0) {
+						  $("<p style='color: #F00;'>Video not found.</p>").appendTo("#video-data-1");
+						  return;
+					   }
+					   $("<img>", {
+						  src: data.items[0].snippet.thumbnails.medium.url,
+						  width: data.items[0].snippet.thumbnails.medium.width,
+						  height: data.items[0].snippet.thumbnails.medium.height
+					   }).appendTo("#video-data-1");
+					   $("<h1></h1>").text(data.items[0].snippet.title).appendTo("#video-data-1");
+					   $("<p></p>").text(convert_time(duration)).appendTo("#video-data-1");
+				}).fail(function(jqXHR, textStatus, errorThrown){
+					       $("<p style='color: #F00;'></p>").text(jqXHR.responseText || errorThrown).appendTo("#video-data-1");
+				   });
+			});
+		});
+	</script>
+</body>
+</html>

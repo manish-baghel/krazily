@@ -14,7 +14,7 @@ var runSequence = require('run-sequence');
 //-----------------
 // Converts Sass to CSS with gulp-sass
 gulp.task('sass', function(){
-  return gulp.src('app/scss/styles.scss')
+  return gulp.src('app/scss/*.scss')
     .pipe(sass()) //plugin to perform task
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
@@ -37,7 +37,7 @@ gulp.task('browserSync',function(){
     browserSync.init({
         server: {
             baseDir: 'app',
-            index: 'index.html'
+            index: 'upload.html'
         },
     })
 });

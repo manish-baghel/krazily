@@ -1,0 +1,101 @@
+#tagNav {
+  display: none; }
+
+#mainContent .mainHeading {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffca00;
+  height: 35px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 13px; }
+  #mainContent .mainHeading span {
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: white; }
+
+#mainContent .container {
+  background-color: #fcfdfe;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; }
+  #mainContent .container .container_header {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    #mainContent .container .container_header header {
+      background-color: #ffca00;
+      height: 35px;
+      padding: 5px;
+      letter-spacing: 2px;
+      font-size: 1.4em;
+      text-transform: uppercase;
+      color: white;
+      margin-bottom: 15px; }
+    #mainContent .container .container_header .filter {
+      text-align: center; }
+      #mainContent .container .container_header .filter span {
+        font-size: 1.4em;
+        word-spacing: 2px;
+        display: block;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 10px; }
+        #mainContent .container .container_header .filter span:hovermain {
+          cursor: pointer; }
+  #mainContent .container .content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    text-align: center; }
+    #mainContent .container .content .feed-card {
+      margin-bottom: 30px; }
+      #mainContent .container .content .feed-card .feed-image {
+        width: 100%;
+        position: relative;
+        text-align: center; }
+        #mainContent .container .content .feed-card .feed-image img {
+          width: 330px;
+          height: 300px; }
+          @media only screen and (max-width: 413px) {
+            #mainContent .container .content .feed-card .feed-image img {
+              width: 100%;
+              height: 300px; } }
+        #mainContent .container .content .feed-card .feed-image i {
+          position: absolute;
+          color: white;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%); }
+      #mainContent .container .content .feed-card .feed-content {
+        text-align: left; }
+        #mainContent .container .content .feed-card .feed-content header {
+          font-size: 1.1em;
+          color: #5b5b5b;
+          letter-spacing: 1px;
+          word-spacing: 2px;
+          font-weight: 600; }
+        #mainContent .container .content .feed-card .feed-content p {
+          text-align: left;
+          margin-top: 15px;
+          color: gray;
+          letter-spacing: 0.5px;
+          line-height: 30px; }
+  #mainContent .container .pageButtons {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    width: 130px;
+    word-spacing: 3px; }
+    #mainContent .container .pageButtons span {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #404142;
+      font-weight: bolder; }
+      #mainContent .container .pageButtons span:hover {
+        cursor: pointer; }

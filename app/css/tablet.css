@@ -1,0 +1,50 @@
+@media screen and (min-width: 601px) {
+  #banner #banner-overlay div {
+    font-size: 1.4em;
+    color: white;
+    text-transform: uppercase; }
+  #banner #banner-overlay .first_heading {
+    font-weight: 600; }
+  #banner #banner-overlay .second_heading {
+    font-size: 1.1em;
+    font-weight: 300; } }
+
+@media screen and (min-width: 601px) {
+  #feeds .container .container_header {
+    height: 60px;
+    padding-top: 15px;
+    font-size: 1.2em; }
+  #feeds .container .content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; }
+    #feeds .container .content .feed-card {
+      width: 49%;
+      float: left; }
+      #feeds .container .content .feed-card:nth-child(2n) {
+        margin-left: 2%; }
+      #feeds .container .content .feed-card .feed-image img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; } }
+
+@media screen and (min-width: 601px) {
+  #footer {
+    padding: 50px 0 0 0; }
+    #footer .footer-links .links li {
+      font-size: 1.4em; }
+    #footer .form header {
+      font-size: 1.4em; }
+    #footer .form input {
+      width: 600px;
+      height: 60px; }
+    #footer .form .message {
+      width: 600px;
+      height: 160px;
+      margin-bottom: 50px; }
+    #footer .footer-black {
+      height: 43px;
+      padding-top: 13px;
+      font-size: 12px;
+      color: #FFFFFF;
+      letter-spacing: 0.15px; } }
